@@ -1,0 +1,32 @@
+package com.laptrinhjavaweb.service.impl;
+
+import java.sql.Timestamp;
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+import com.laptrinhjavaweb.model.CategoryModel;
+import com.laptrinhjavaweb.model.NewModel;
+import com.laptrinhjavaweb.service.INewService;
+import com.laptrinhjavaweb.paging.Pageble;
+import com.laptrinhjavaweb.dao.ICategoryDAO;
+import com.laptrinhjavaweb.dao.INewDAO;
+
+@Service
+public class NewService implements INewService{
+	@Autowired
+	private INewDAO newDao;
+	@Autowired
+	private ICategoryDAO iCategory;
+	
+	
+	@Override
+	public List<NewModel> findAll() {
+		
+		return newDao.findAll();
+	}
+
+}
