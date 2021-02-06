@@ -1,0 +1,19 @@
+package com.laptrinhjavaweb.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+
+public class AbstractEntity {
+	@Column (name = "createddate")
+	private Date createdDate;
+	
+	@Column (name = "modifieddate")
+	private Date modifiedDate;
+	
+	@Column (name = "createdby")
+	private String createdBy;
+	
+	@Column (name = "modifiedby")
+	private String modifiedBy;
+}

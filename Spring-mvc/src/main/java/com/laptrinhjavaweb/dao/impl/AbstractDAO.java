@@ -12,11 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import org.springframework.stereotype.Repository;
+
 import com.laptrinhjavaweb.dao.GenericDAO;
 import com.laptrinhjavaweb.mapper.RowMapper;
 import com.laptrinhjavaweb.model.CategoryModel;
 import com.laptrinhjavaweb.model.NewModel;
 
+@Repository
 public class AbstractDAO<T> implements GenericDAO<T> {
 	//crtl + shift + m  dung resourcebundle de lay file db.properties de config connect database
 	//ResourceBundle mybundle = ResourceBundle.getBundle("db");

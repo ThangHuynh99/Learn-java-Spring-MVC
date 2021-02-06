@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page import="com.laptrinhjavaweb.util.SecurityUtils" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- Navigation -->
@@ -16,15 +16,16 @@
 			<li class="nav-item active"><a class="nav-link" href="#">Home
 					<span class="sr-only">(current)</span>
 			</a></li>
-			<c:if test="${not empty USERMODEL}"> 
-				<li class="nav-item"><a class="nav-link" href="#">Xin chào, ${USERMODEL.fullName}</a></li>
-				<li class="nav-item"><a class="nav-link" href='<c:url value="/logout?action=logout"/> '>Logout</a></li>
-			</c:if>
 			
-			<c:if test="${empty USERMODEL}"> 
-				<li class="nav-item"><a class="nav-link" href='<c:url value="/login?action=login"/> '>Login</a></li>
-				<li class="nav-item"><a class="nav-link" href='<c:url value="/register?action=register"/>'>Register</a></li>
-			</c:if>
+			<security:authorize access = "isAnonymous()">
+				<li class="nav-item"><a class="nav-link" href='<c:url value="/login"/> '>Login</a></li>
+				<li class="nav-item"><a class="nav-link" href='<c:url value="/register"/>'>Register</a></li>
+			</security:authorize>
+			
+			<security:authorize access = "isAuthenticated()">
+				<li class="nav-item"><a class="nav-link" href="#">Xin chào, <%= SecurityUtils.getPrincipal().getFullName() %></a></li>
+				<li class="nav-item"><a class="nav-link" href='<c:url value="/logout"/> '>Logout</a></li>
+			</security:authorize>
 		</ul>
 	</div>
 </div>
