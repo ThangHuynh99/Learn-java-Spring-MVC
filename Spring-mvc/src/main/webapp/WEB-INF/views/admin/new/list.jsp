@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="main-content">
-		<form method="get" id="formSubmit" action="<c:url value='/admin-new'/>">
+		<form method="get" id="formSubmit" action="<c:url value='/admin/new/list'/>">
 			<div class="main-content-inner">
 				<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 					<ul class="breadcrumb">
@@ -66,7 +66,7 @@
 															<td>${item.title}</td>
 															<td>${item.shortDescription}</td>
 															<td>
-																<c:url var="editURL" value="/admin-new">
+																<c:url var="editURL" value="/admin/new">
 																	<c:param name="type" value="edit"/>
 																	<c:param name="id" value="${item.id}"/>
 																</c:url>
@@ -80,10 +80,6 @@
 											</table>
 											<ul class="pagination" id="pagination"></ul>
 											<input type="hidden" value="" id="page" name="page" /> 
-											<input type="hidden" value="" id="maxPageItem" name="maxPageItem" />
-											<!-- <input type="hidden" value="" id="sortName" name="sortName" />
-											<input type="hidden" value="" id="sortBy" name="sortBy" /> -->
-											<input type="hidden" value="" id="type" name="type" />
 										</div>
 									</div>
 								</div>
@@ -93,52 +89,26 @@
 		</form>
 	</div>
 	<script>
+		var totalPages = ${model.totalPage};
+		var currentPage = ${model.page};
+		//var limit = 4; // tong so item hien thi tren 1 page
 		$(function() {
-			var totalPages = ${model.totalPage};
-			var currentPage = ${model.page};
-			var limit = 4; // tong so item hien thi tren 1 page
 			window.pagObj = $("#pagination").twbsPagination({
 				totalPages : totalPages,
 				visiblePages : 4,
-				startPage : currentPage,
+				startPage: currentPage,
 				onPageClick : function(event, page) {
-					/* 	console.info(page + ' (from options)'); */
-					if (currentPage != page) {
-						$('#maxPageItem').val(limit);
-						$('#page').val(page);
-						// $('#sortName').val('title');
-						// $('#sortBy').val('desc');
-						$('#type').val('list')
-						$('#formSubmit').submit();
+					if(currentPage != page){
+				//	$('#maxPageItem').val(limit);
+					$('#page').val(page);
+					// $('#sortName').val('title');
+					// $('#sortBy').val('desc');
+					//$('#type').val('list')
+					$('#formSubmit').submit();
 					}
 				}
-			});
+			})
 		});
-
-		$('#btnDelete').click(function(){
-			var data = {};
-				var ids = $('tbody input[type=checkbox]:checked').map(function () {
-		            return $(this).val();
-		        }).get();
-				data['ids'] = ids;
-				deleteNew(data);
-		});
-
-		function deleteNew(data) {
-			$.ajax({
-				url: '${APIurl}',
-				type: 'DELETE',
-				contentType: 'application/json',
-				data: JSON.stringify(data),
-				//dataType: 'json',
-				success: function (result) {
-					window.location.href = "${NewURL}?type=list&page=1&maxPageItem=4&message=deleteSuccess";
-				},
-				error: function (error) {
-					window.location.href = "${NewURL}?type=list&page=1&maxPageItem=4&message=errorSystem";
-				}
-			});
-		}
 	</script>
 </body>
 </html>

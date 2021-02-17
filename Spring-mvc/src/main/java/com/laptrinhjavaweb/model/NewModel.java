@@ -1,6 +1,6 @@
 package com.laptrinhjavaweb.model;
 
-public class NewModel<T> extends AbstractModel<NewModel> {
+public class NewModel extends AbstractModel<NewModel> {
 
 	private String title;
 	private String thumbnail;

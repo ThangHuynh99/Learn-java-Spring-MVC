@@ -20,9 +20,15 @@
 			<div class="row">
 				<div class="col-md-6 login-right">
 					<h2 style="color: black">Login</h2>
-					<c:if test="${not empty message }">
-						<div class="alert alert-${alert} ">
-							<p class="justify-content-center">${message}</p>
+					<c:if test="${param.incorrectAccount != null}">
+						<div class="alert alert-danger ">
+							<p class="justify-content-center">Username or password is incorrect!</p>
+						</div>
+					</c:if>
+					
+					<c:if test="${param.accessDenied != null}">
+						<div class="alert alert-danger ">
+							<p class="justify-content-center">You have not permission!</p>
 						</div>
 					</c:if>
 
@@ -32,16 +38,16 @@
 	}
 </script> -->
 
-					<form type="submit" method="post" action="<c:url value='/login'/>">
+					<form type="submit" method="post" action="<c:url value='/j_spring_security_check'/>">
 						<div class="form-group">
 							<label style="color: black">Username</label> <input type="text"
-								name="userName" value="" placeholder="Username"
+								name="j_username" value="" placeholder="Username"
 								class="form-control">
 						</div>
 
 						<div class="form-group">
 							<label style="color: black">Password</label> <input
-								type="password" name="passWord" value="" placeholder="Password"
+								type="password" name="j_password" value="" placeholder="Password"
 								class="form-control">
 						</div>
 

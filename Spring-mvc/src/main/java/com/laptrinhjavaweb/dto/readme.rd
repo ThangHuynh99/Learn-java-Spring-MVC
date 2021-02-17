@@ -3,3 +3,5 @@ DTO có nhiệm vụ nhận dữ liệu từ client gửi về, giống với mo
 client -> DTO -> controller -> service -> repository
 
 client -> DTO -> API -> service -> repository
+
+swagger

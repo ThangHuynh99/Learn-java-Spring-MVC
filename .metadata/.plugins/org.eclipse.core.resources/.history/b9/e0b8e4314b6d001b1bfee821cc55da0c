@@ -1,0 +1,33 @@
+package com.laptrinhjavaweb.service.impl;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.laptrinhjavaweb.model.NewModel;
+import com.laptrinhjavaweb.repository.NewRepository;
+import com.laptrinhjavaweb.service.INewService;
+import com.laptrinhjavaweb.dao.INewDAO;
+import com.laptrinhjavaweb.dto.NewDTO;
+
+@Service
+public class NewService implements INewService{
+	@Autowired
+	private INewDAO newDao;
+	
+	@Autowired
+	private NewRepository newRepository;
+	
+	@Override
+	public List<NewDTO> findAll() {
+//		return newDao.findAll();
+		List<NewDTO> newDTO = new ArrayList<NewDTO>(); 
+		newDTO.add(newRepository.findAll());
+		return newDTO;
+	}
+
+}

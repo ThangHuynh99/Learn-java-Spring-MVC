@@ -15,7 +15,7 @@ public class AbstractDTO<T> {
 	private long[] ids;
 	private List<T> listResult = new ArrayList<>(); 
 	private Integer page;// page dang hien thi
-	private Integer maxPageItem;// tong so page hien thi
+	private Integer limit;// tong so item hien thi
 	private Integer totalPage;// tong so page
 	private Integer totalItems;
 	private String sortName;
@@ -26,21 +26,17 @@ public class AbstractDTO<T> {
 		return listResult;
 	}
 
-
 	public void setListResult(List<T> listResult) {
 		this.listResult = listResult;
 	}
-
 
 	public long[] getIds() {
 		return ids;
 	}
 
-
 	public void setIds(long[] ids) {
 		this.ids = ids;
 	}
-
 
 	public void setId(Long id) {
 		this.id = id;
@@ -54,47 +50,38 @@ public class AbstractDTO<T> {
 		return createdDate;
 	}
 
-
 	public void setCreatedDate(Timestamp createdDate) {
 		this.createdDate = createdDate;
 	}
-
 
 	public Timestamp getModifiedDate() {
 		return modifiedDate;
 	}
 
-
 	public void setModifiedDate(Timestamp modifiedDate) {
 		this.modifiedDate = modifiedDate;
 	}
-
 
 	public String getCreatedBy() {
 		return createdBy;
 	}
 
-
 	public void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
 	}
-
 
 	public String getModifiedBy() {
 		return modifiedBy;
 	}
 
-
 	public void setModifiedBy(String modifiedBy) {
 		this.modifiedBy = modifiedBy;
 	}
-
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	}
-
 
 	public Integer getPage() {
 		return page;
@@ -105,21 +92,9 @@ public class AbstractDTO<T> {
 		this.page = page;
 	}
 
-
-	public Integer getMaxPageItem() {
-		return maxPageItem;
-	}
-
-
-	public void setMaxPageItem(Integer maxPageItem) {
-		this.maxPageItem = maxPageItem;
-	}
-
-
 	public Integer getTotalPage() {
 		return totalPage;
 	}
-
 
 	public void setTotalPage(Integer totalPage) {
 		this.totalPage = totalPage;
@@ -163,5 +138,15 @@ public class AbstractDTO<T> {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+
+	public Integer getLimit() {
+		return limit;
+	}
+
+
+	public void setLimit(Integer limit) {
+		this.limit = limit;
 	}
 }

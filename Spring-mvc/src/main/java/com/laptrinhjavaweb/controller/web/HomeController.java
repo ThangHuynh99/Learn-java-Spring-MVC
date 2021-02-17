@@ -21,9 +21,9 @@ public class HomeController {
         return mav;
     }
     
-    @RequestMapping(value = "/home/profile", method = RequestMethod.GET)
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
     public ModelAndView home2Page() {
-        ModelAndView mav = new ModelAndView("web/home");
+        ModelAndView mav = new ModelAndView("register");
         return mav;
     }
     

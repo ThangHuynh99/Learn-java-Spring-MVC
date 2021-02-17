@@ -1,9 +1,0 @@
-package com.laptrinhjavaweb.util;
-
-public class SecurityUtils {
-
-	public statis List<String> getAuthorities() {
-		List<String> results = new ArrayList<>();
-		return results;
-	}
-}
