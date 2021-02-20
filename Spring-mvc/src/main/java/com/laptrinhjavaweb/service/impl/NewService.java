@@ -64,7 +64,7 @@ public class NewService implements INewService{
 	@Override
 	@Transactional //xu ly transaction
 	public NewDTO insert(NewDTO insertNew) {
-		CategoryEntity categoryEntity = categoryRepository.findOneByCategoryCode(insertNew.getCategoryCode());
+		CategoryEntity categoryEntity = categoryRepository.findOneByCode(insertNew.getCategoryCode());
 		NewEntity newEntity = newConverter.toEntity(insertNew, categoryEntity);
 		newEntity = newRepository.save(newEntity);
 		insertNew = newConverter.toDTO(newEntity);
@@ -75,10 +75,36 @@ public class NewService implements INewService{
 	@Transactional
 	public NewDTO update(NewDTO updateNew) {
 		NewEntity oldNew = newRepository.findOne(updateNew.getId());
-		NewEntity newNew = new NewEntity();
-		CategoryEntity categoryEntity = categoryRepository.findOneByCategoryCode(updateNew.getCategoryCode()); //Muc dich de lay categoryID
-		newNew = newConverter.toEntity(updateNew, categoryEntity, oldNew);// dung ham nay vi phai dua tren newEntity cu.
-		return newConverter.toDTO(newRepository.save(newNew));
+		NewEntity newEntity = new NewEntity();
+		CategoryEntity categoryEntity = categoryRepository.findOneByCode(updateNew.getCategoryCode()); //Muc dich de lay categoryID
+		newEntity = newConverter.toEntity(updateNew, categoryEntity, oldNew);// dung ham nay vi phai dua tren newEntity cu.
+		newEntity = newRepository.save(newEntity);
+		return newConverter.toDTO(newEntity);
+	}
+
+	//ham chung cua ham save and update(Refactory code)
+	@Override
+	@Transactional
+	public NewDTO save(NewDTO saveOrUpdateNew) {
+		CategoryEntity categoryEntity = categoryRepository.findOneByCode(saveOrUpdateNew.getCategoryCode());
+		NewEntity newEntity = new NewEntity();
+		if(saveOrUpdateNew.getId() == null) {
+			newEntity = newConverter.toEntity(saveOrUpdateNew, categoryEntity);
+			newEntity = newRepository.save(newEntity);
+		}else if (saveOrUpdateNew.getId() != null) {
+			NewEntity oldNew = newRepository.findOne(saveOrUpdateNew.getId());
+			newEntity = newConverter.toEntity(saveOrUpdateNew, categoryEntity, oldNew);// dung ham nay vi phai dua tren newEntity cu.
+			newEntity = newRepository.save(newEntity);
+		}
+		return newConverter.toDTO(newEntity);
+	}
+
+	@Override
+	@Transactional
+	public void delete(long[] ids) {
+		for(long id: ids) {
+			newRepository.delete(id);
+		}
 	}
 }
 

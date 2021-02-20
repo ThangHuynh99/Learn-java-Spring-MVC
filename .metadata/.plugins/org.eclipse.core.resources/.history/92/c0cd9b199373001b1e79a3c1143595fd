@@ -1,0 +1,26 @@
+package com.laptrinhjavaweb.util;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class MessageUtil {
+
+	public Map<String, String> showMessage(String message) {
+		Map<String, String> result = new HashMap<>();
+		if (message != null) {
+			if (message.equals("insert_success")) {
+				result.put("message", "Insert success!");
+			} else if (messages.equals("update_success")) {
+				message= "Update sucess!";
+			} else if (messages.equals("delete_success")) {
+				message= "Delete sucess!";
+			} else if (messages.equals("error_system")) {
+				message= "Error system!";
+			}
+			return message;
+		}
+		return null;
+	}
+}

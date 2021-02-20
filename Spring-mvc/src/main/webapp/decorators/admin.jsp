@@ -16,6 +16,9 @@
 	<link rel="stylesheet"	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script	src="<c:url value='/ckeditor/ckeditor.js' />"></script>
+	<!-- sweetalert -->
+	<script src="<c:url value='/template/sweetalert/sweetalert2.min.js' />"></script>
+	<link rel="stylesheet"	href="<c:url value='/template/sweetalert/sweetalert2.min.css' />" />
 </head>
 <body cl ass="no-skin">
 	<!-- header -->

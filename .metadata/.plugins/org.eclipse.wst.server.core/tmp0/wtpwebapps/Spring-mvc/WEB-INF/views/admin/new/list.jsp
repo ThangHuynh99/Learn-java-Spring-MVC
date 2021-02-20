@@ -1,7 +1,7 @@
 <%@include file="/common/taglib.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
-<c:url var="APIurl" value="/api-admin-new"/>
-<c:url var="NewURL" value="/admin-new"/>
+<c:url var="APIurl" value="/api/new"/>
+<c:url var="NewURL" value="/admin/new/list"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +21,8 @@
 				<div class="page-content">
 					<div class="row">
 						<div class="col-xs-12">
-							<c:if test="${not empty messageResponse}">
-								<div class="alert alert-${alert}">${messageResponse}</div>
+							<c:if test="${not empty message}">
+								<div class="alert alert-${alert}">${message}</div>
 							</c:if>
 							<div class="widget-box table-filter">
 								<div class="table-btn-controls">
@@ -35,7 +35,7 @@
 											</span>
 											</a>
 										 <!-- 	data-toggle="tooltip" --> 
-											<button id="btnDelete" type="button"
+											<button id="btnDelete" type="button" onclick="warningBeforeDelete()"
 												class="dt-button buttons-html5 btn btn-white btn-primary btn-bold"
 												data-toggle="tooltip" title='Xóa bài viết'>
 												<span> <i class="fa fa-trash-o bigger-110 pink"></i>
@@ -108,6 +108,51 @@
 				}
 			})
 		});
+		
+		function warningBeforeDelete(){
+			swal({
+				  title: "Xác nhận xóa",
+				  text: "Bạn có chắc chắn muốn xóa hay không",
+				  type: "warning",
+				  showCancelButton: true,
+				  confirmButtonClass: "btn-success",
+				  cancelButtonClass: "btn-danger",
+				  confirmButtonText: "Xác nhận",
+				  cancelButtonText: "Hủy bỏ",
+				}).then(function(isConfirm) {
+				  if (isConfirm) {
+						var ids = $('tbody input[type=checkbox]:checked').map(function () {
+				            return $(this).val();
+				        }).get();
+						deleteNew(ids);
+				  }
+				});	
+		}
+		
+		/* $('#btnDelete').click(function(){
+			var data = {};
+				var ids = $('tbody input[type=checkbox]:checked').map(function () {
+		            return $(this).val();
+		        }).get();
+				data['ids'] = ids;
+				deleteNew(data);
+		}); */
+
+		function deleteNew(data) {
+			$.ajax({
+				url: '${APIurl}',
+				type: 'DELETE',
+				contentType: 'application/json',
+				data: JSON.stringify(data),
+				//dataType: 'json',
+				success: function (result) {
+					window.location.href = "${NewURL}?page=1&message=deleteSuccess";
+				},
+				error: function (error) {
+					window.location.href = "${NewURL}?page=1&message=errorSystem";
+				}
+			});
+		}
 	</script>
 </body>
 </html>

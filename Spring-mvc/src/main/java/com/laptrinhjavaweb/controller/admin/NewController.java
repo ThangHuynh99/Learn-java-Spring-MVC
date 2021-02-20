@@ -1,5 +1,9 @@
 package com.laptrinhjavaweb.controller.admin;
 
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +19,7 @@ import com.laptrinhjavaweb.dto.NewDTO;
 import com.laptrinhjavaweb.model.NewModel;
 import com.laptrinhjavaweb.service.ICategoryService;
 import com.laptrinhjavaweb.service.INewService;
+import com.laptrinhjavaweb.util.MessageUtil;
 
 //import com.laptrinhjavaweb.model.NewModel;
 //import com.laptrinhjavaweb.service.INewService;
@@ -26,6 +31,9 @@ public class NewController {
 	
 	@Autowired 
 	private ICategoryService iCategoryService;
+	
+	@Autowired 
+	private MessageUtil messageUtil;
 	@RequestMapping(value = "/admin/new/list", method = RequestMethod.GET)
     public ModelAndView showList(@RequestParam("page") int page) { //limit neu request tu client
 		NewDTO model = new NewDTO();
@@ -43,14 +51,18 @@ public class NewController {
 	
 	//required = false check id null or notnull, notnull thi khong lay
 	@RequestMapping(value = "/admin/new/edit", method = RequestMethod.GET)
-    public ModelAndView showEdit(@RequestParam(value = "id", required = false) Long id) {
+    public ModelAndView showEdit(@RequestParam(value = "id", required = false) Long id, HttpServletRequest request) {
 		NewDTO model = new NewDTO();
-		CategoryDTO category = new CategoryDTO();
+		ModelAndView ma = new ModelAndView("admin/new/edit");
+		String message = request.getParameter("message");
 		if (id != null) {
 			model = iNewService.findOne(id);
 		}
-		//ham ceil tra ve integer ma lon hon hoac bang tham so 
-        ModelAndView ma = new ModelAndView("admin/new/edit");
+		if(message != null) {
+			Map<String, String> messages = messageUtil.showMessage(message);
+			ma.addObject("message", messages.get("messgae"));
+			ma.addObject("alert", messages.get("alert"));
+		}
 		ma.addObject("model", model); 
 		ma.addObject("categories", iCategoryService.findAll()); 
         return ma;

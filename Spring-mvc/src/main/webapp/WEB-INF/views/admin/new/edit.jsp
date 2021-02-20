@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<c:if test="${not empty message}">
-						<div class="alert alert-${alert}">
+						<div class="alert alert-sucess">
   							${message}
 						</div>
 					</c:if>
@@ -126,7 +126,7 @@
             	window.location.href = "${editNewURL}?id="+result.id+"&message=insert_success";
             },
             error: function (error) {
-            	window.location.href = "${newURL}?page=1&message=error_system";
+            	window.location.href = "${editNewURL}?message=error_system";
             }
         });
 	}
