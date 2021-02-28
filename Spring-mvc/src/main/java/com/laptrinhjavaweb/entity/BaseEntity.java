@@ -15,8 +15,9 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+@SuppressWarnings("unused")
 @MappedSuperclass //dinh nghia BaseEntity la parent entity
-//@EntityListeners(AuditingEntityListener.class) //config 
+@EntityListeners(AuditingEntityListener.class) //config 
 public class BaseEntity {
 	@Id //notnull va primary 
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // set autoincrement
@@ -56,6 +57,22 @@ public class BaseEntity {
 
 	public Long getId() {
 		return id;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public void setModifiedDate(Date modifiedDate) {
+		this.modifiedDate = modifiedDate;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
 	}
 	
 }

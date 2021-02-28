@@ -1,9 +1,0 @@
-package com.laptrinhjavaweb.service.impl;
-
-import java.util.List;
-
-import com.laptrinhjavaweb.dto.CategoryDTO;
-
-public class CategoryService {
-	List<CategoryDTO> findAll();
-}
