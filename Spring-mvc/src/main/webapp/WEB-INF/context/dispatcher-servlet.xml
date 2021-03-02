@@ -25,7 +25,7 @@
 	
 	
  	 <!-- dung cai annotation nhu @Controller @RequestMapping-->
-	<mvc:annotation-driven />
+	<mvc:annotation-driven /> 
 	
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -41,5 +41,5 @@
     </mvc:interceptors> -->
     
     <mvc:resources mapping="/template/**" location="/template/" />
-    <mvc:resources mapping="images/**" location="/images/" /> 
+    
 </beans>

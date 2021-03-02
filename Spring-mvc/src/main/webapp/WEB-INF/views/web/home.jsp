@@ -66,6 +66,9 @@
 =======
 						<a href="#"><img class="card-img-top"
 							src="http://placehold.it/700x400" alt=""></a>
+<<<<<<< HEAD
+>>>>>>> parent of e959fc0... update home page
+=======
 >>>>>>> parent of e959fc0... update home page
 						<div class="card-body">
 							<h4 class="card-title">
