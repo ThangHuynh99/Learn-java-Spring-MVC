@@ -10447,3 +10447,6 @@ java.lang.Exception: File not found: E:\SPRING COURSE\Spring MVC\Spring-mvc\targ
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2021-03-02 09:44:23.238
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-02 09:51:29.160
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
