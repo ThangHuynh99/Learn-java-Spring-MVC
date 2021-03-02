@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<c:if test="${not empty message}">
-						<div class="alert alert-sucess">
+						<div class="alert alert-${alert}">
   							${message}
 						</div>
 					</c:if>
@@ -49,6 +49,13 @@
 								<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Tên bài viết</label>
 								<div class="col-sm-9">
 									<form:input path="title" cssClass="col-xs-10 col-sm-5"/>
+								</div>
+						</div>
+						
+						<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Giá Bán</label>
+								<div class="col-sm-9">
+									<form:input path="price" cssClass="col-xs-10 col-sm-5"/>
 								</div>
 						</div>
 						<div class="form-group">

@@ -5,7 +5,6 @@ E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\mapper\
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\dao\impl\AbstractDAO.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\service\ICategoryService.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\mapper\NewMapper.java
-E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\converter\NewConverter.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\controller\web\HomeController.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\mapper\CategoryMapper.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\security\CustomSuccessHandler.java
@@ -13,14 +12,12 @@ E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\control
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\repository\UserRepository.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\util\SecurityUtils.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\dao\INewDAO.java
-E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\repository\CategoryRepository.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\api\web\NewAPI.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\dto\CategoryDTO.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\dto\MyUser.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\paging\Sorter.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\config\JPAConfig.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\service\ICommentService.java
-E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\service\impl\CategoryService.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\model\CategoryModel.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\service\INewService.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\dao\impl\NewDAO.java
@@ -32,7 +29,6 @@ E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\dto\New
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\entity\UserEntity.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\constant\SystemConstant.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\dao\GenericDAO.java
-E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\entity\CategoryEntity.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\model\AbstractModel.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\entity\NewEntity.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\model\NewModel.java
@@ -42,4 +38,3 @@ E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\entity\
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\service\impl\CustomUserDetailsService.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\dao\impl\CategoryDAO.java
 E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\entity\BaseEntity.java
-E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\util\MessageUtil.java

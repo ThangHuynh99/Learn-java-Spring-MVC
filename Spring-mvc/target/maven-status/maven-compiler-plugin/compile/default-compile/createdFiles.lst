@@ -1,4 +1,3 @@
-com\laptrinhjavaweb\entity\CategoryEntity.class
 com\laptrinhjavaweb\dto\CategoryDTO.class
 com\laptrinhjavaweb\model\AbstractModel.class
 com\laptrinhjavaweb\util\SecurityUtils.class
@@ -11,12 +10,10 @@ com\laptrinhjavaweb\dto\NewDTO.class
 com\laptrinhjavaweb\entity\RoleEntity.class
 com\laptrinhjavaweb\repository\UserRepository.class
 com\laptrinhjavaweb\mapper\NewMapper.class
-com\laptrinhjavaweb\service\impl\CategoryService.class
 com\laptrinhjavaweb\dao\impl\CategoryDAO.class
 com\laptrinhjavaweb\service\impl\NewService.class
 com\laptrinhjavaweb\paging\Pageble.class
 com\laptrinhjavaweb\security\CustomSuccessHandler.class
-com\laptrinhjavaweb\util\MessageUtil.class
 com\laptrinhjavaweb\api\admin\NewAPI.class
 com\laptrinhjavaweb\controller\admin\NewController.class
 com\laptrinhjavaweb\mapper\CategoryMapper.class
@@ -29,8 +26,6 @@ com\laptrinhjavaweb\service\ICategoryService.class
 com\laptrinhjavaweb\dto\AbstractDTO.class
 com\laptrinhjavaweb\service\impl\CustomUserDetailsService.class
 com\laptrinhjavaweb\config\JPAConfig.class
-com\laptrinhjavaweb\repository\CategoryRepository.class
-com\laptrinhjavaweb\converter\NewConverter.class
 com\laptrinhjavaweb\dao\impl\AbstractDAO.class
 com\laptrinhjavaweb\service\INewService.class
 com\laptrinhjavaweb\constant\SystemConstant.class

@@ -92,7 +92,7 @@ public class NewService implements INewService{
 			newEntity = newConverter.toEntity(saveOrUpdateNew, categoryEntity);
 			newEntity = newRepository.save(newEntity);
 		}else if (saveOrUpdateNew.getId() != null) {
-			NewEntity oldNew = newRepository.findOne(saveOrUpdateNew.getId());
+			NewEntity oldNew = newRepository.findOne(saveOrUpdateNew.getId());// lay thong tin truong can update de set.
 			newEntity = newConverter.toEntity(saveOrUpdateNew, categoryEntity, oldNew);// dung ham nay vi phai dua tren newEntity cu.
 			newEntity = newRepository.save(newEntity);
 		}

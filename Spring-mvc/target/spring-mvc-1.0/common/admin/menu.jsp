@@ -40,7 +40,7 @@
 				Quản lý bài viết <b class="arrow fa fa-angle-down"></b>
 		</a> <b class="arrow"></b>
 			<ul class="submenu">
-				<li><a href='<c:url value="/admin/new/list?page=1"/>'>
+				<li><a href='<c:url value="/admin/new/list"/>'>
 				 <i class="menu-icon fa fa-caret-right"></i>
 						DS bài viết
 				</a> <b class="arrow"></b></li>
