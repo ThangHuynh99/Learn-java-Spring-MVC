@@ -10,9 +10,8 @@ import com.laptrinhjavaweb.model.CategoryModel;
 public interface ICategoryService {
 //	List<CategoryModel> findAll();
 	CategoryModel findOne(long id);
-	List<CategoryDTO> findAllCategory();
+//	List<CategoryDTO> findAll();
 	Map<String, String> findAll();
-	
 	//ham nay dung de lay categoryID dung de insert vao bang API
 	CategoryModel findOneByCode(String code);
 	

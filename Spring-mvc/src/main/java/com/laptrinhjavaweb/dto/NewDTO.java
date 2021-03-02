@@ -7,8 +7,6 @@ public class NewDTO extends AbstractDTO<NewDTO> {
 	private String shortDescription;
 	private String content;
 	private Long categoryID;
-	private Long price;
-	private String vnd;
 	//dung categoryCode la string vi client gui len la string
 	private String categoryCode;
 	
@@ -75,26 +73,6 @@ public class NewDTO extends AbstractDTO<NewDTO> {
 
 	public void setCategoryCode(String categoryCode) {
 		this.categoryCode = categoryCode;
-	}
-
-
-	public Long getPrice() {
-		return price;
-	}
-
-
-	public void setPrice(Long price) {
-		this.price = price;
-	}
-
-
-	public String getVnd() {
-		return vnd;
-	}
-
-
-	public void setVnd(String vnd) {
-		this.vnd = vnd;
 	}
 
 }

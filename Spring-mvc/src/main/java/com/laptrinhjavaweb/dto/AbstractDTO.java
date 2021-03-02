@@ -1,15 +1,15 @@
 package com.laptrinhjavaweb.dto;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 //DTO stand for data transfer object
 public class AbstractDTO<T> {
 	
 	private Long id;
-	private Date createdDate;
-	private Date modifiedDate;
+	private Timestamp createdDate;
+	private Timestamp modifiedDate;
 	private String createdBy;
 	private String modifiedBy;
 	private long[] ids;
@@ -46,19 +46,19 @@ public class AbstractDTO<T> {
 		return id;
 	}
 
-	public Date getCreatedDate() {
+	public Timestamp getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(Timestamp createdDate) {
 		this.createdDate = createdDate;
 	}
 
-	public Date getModifiedDate() {
+	public Timestamp getModifiedDate() {
 		return modifiedDate;
 	}
 
-	public void setModifiedDate(Date modifiedDate) {
+	public void setModifiedDate(Timestamp modifiedDate) {
 		this.modifiedDate = modifiedDate;
 	}
 

@@ -13,11 +13,12 @@
 	<div class="row ">
 		<div class="col-lg-3 ">
 			<h1 class="my-4"  style="padding-left: 90px;">T&T</h1>
-			<c:forEach var="item" items="${category.listResult}">
 			<div class="list-group">
-				<a href="#" class="list-group-item" style="padding-left: 90px;" value="${item.code}">${item.name}</a>
+				<a href="#" class="list-group-item" style="padding-left: 90px;">Category 1</a>
+				<a href="#" class="list-group-item" style="padding-left: 90px;">Category 2</a>
+				<a href="#"	class="list-group-item" style="padding-left: 90px;">Category 3</a>
 			</div>
-			</c:forEach>
+
 		</div>
 		<!-- /.col-lg-3 -->
 
@@ -57,18 +58,17 @@
 			</div>
 
 			<div class="row">
-			<c:forEach var = "item" items="${newModel.listResult}" >
+
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src='<c:url value="/images/lebron-18.jpg"></c:url>' alt=""></a>
-					
+						<a href="#"><img class="card-img-top" src='<c:url value="/images/lebron-18.jpg"></c:url>' alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
-								<a href="#">${item.title }</a>
+								<a href="#">Item One</a>
 							</h4>
-							<h5 id="price" value = "${item.price}">${item.vnd}</h5>
-							<p class="card-text">${item.shortDescription}</p>
+							<h5>$24.99</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Amet numquam aspernatur!</p>
 						</div>
 						<div class="card-footer">
 							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
@@ -76,8 +76,8 @@
 						</div>
 					</div>
 				</div>
-			</c:forEach>
-				<!-- <div class="col-lg-4 col-md-6 mb-4">
+
+				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
 						<a href="#"><img class="card-img-top"
 							src="http://placehold.it/700x400" alt=""></a>
@@ -172,7 +172,7 @@
 								&#9734;</small>
 						</div>
 					</div>
-				</div> -->
+				</div>
 
 			</div>
 			<!-- /.row -->

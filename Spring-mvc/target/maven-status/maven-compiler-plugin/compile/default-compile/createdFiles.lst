@@ -3,7 +3,6 @@ com\laptrinhjavaweb\dto\CategoryDTO.class
 com\laptrinhjavaweb\model\AbstractModel.class
 com\laptrinhjavaweb\util\SecurityUtils.class
 com\laptrinhjavaweb\dao\impl\NewDAO.class
-com\laptrinhjavaweb\api\admin\output\OutputNew.class
 com\laptrinhjavaweb\model\NewModel.class
 com\laptrinhjavaweb\repository\NewRepository.class
 com\laptrinhjavaweb\controller\web\HomeController.class

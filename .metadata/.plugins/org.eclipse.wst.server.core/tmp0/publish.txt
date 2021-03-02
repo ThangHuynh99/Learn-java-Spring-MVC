@@ -1,3 +1,6 @@
 #Tomcat publish data
-#Tue Mar 02 09:28:29 ICT 2021
+#Tue Mar 02 09:41:42 ICT 2021
+>>>>>>>=parent of e959fc0... update home page
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Thang\ Huynh\\.m2\\repository\\org\\springframework\\spring-web\\4.3.13.RELEASE\\spring-web-4.3.13.RELEASE.jar=WEB-INF/lib/spring-web-4.3.13.RELEASE.jar
+=\=\=\=\=\=\=
+<<<<<<<=HEAD

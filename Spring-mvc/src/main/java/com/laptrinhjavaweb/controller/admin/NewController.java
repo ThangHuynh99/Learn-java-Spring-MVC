@@ -4,7 +4,6 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.hibernate.metamodel.source.binder.Sortable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -18,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.laptrinhjavaweb.dto.CategoryDTO;
 import com.laptrinhjavaweb.dto.NewDTO;
 import com.laptrinhjavaweb.model.NewModel;
-import com.laptrinhjavaweb.paging.Sorter;
 import com.laptrinhjavaweb.service.ICategoryService;
 import com.laptrinhjavaweb.service.INewService;
 import com.laptrinhjavaweb.util.MessageUtil;
@@ -36,15 +34,13 @@ public class NewController {
 	
 	@Autowired 
 	private MessageUtil messageUtil;
-	
 	@RequestMapping(value = "/admin/new/list", method = RequestMethod.GET)
     public ModelAndView showList(@RequestParam("page") int page) { //limit neu request tu client
 		NewDTO model = new NewDTO();
 		model.setPage(page);
 		model.setLimit(4);
-		Pageable pageable = new PageRequest(page - 1, model.getLimit()); // new Sorter(sortName, sortBy)
-		
-		model.setListResult(iNewService.findAll(pageable ));
+		Pageable pageable = new PageRequest(page - 1, model.getLimit());
+		model.setListResult(iNewService.findAll(pageable));
         ModelAndView mav = new ModelAndView("admin/new/list");
         model.setTotalItems(iNewService.getTotalItem());
 		//ham ceil tra ve integer ma lon hon hoac bang tham so 
@@ -64,7 +60,7 @@ public class NewController {
 		}
 		if(message != null) {
 			Map<String, String> messages = messageUtil.showMessage(message);
-			ma.addObject("message", messages.get("message"));
+			ma.addObject("message", messages.get("messgae"));
 			ma.addObject("alert", messages.get("alert"));
 		}
 		ma.addObject("model", model); 

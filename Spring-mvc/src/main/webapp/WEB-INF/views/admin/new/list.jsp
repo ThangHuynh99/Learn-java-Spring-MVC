@@ -104,9 +104,6 @@
 					// $('#sortBy').val('desc');
 					//$('#type').val('list')
 					$('#formSubmit').submit();
-					var data = {};
-					data["page"] = 	$('#page').val(page);
-					getNew(data);
 					}
 				}
 			})
@@ -150,30 +147,6 @@
 				//dataType: 'json',
 				success: function (result) {
 					window.location.href = "${NewURL}?page=1&message=deleteSuccess";
-				},
-				error: function (error) {
-					window.location.href = "${NewURL}?page=1&message=errorSystem";
-				}
-			});
-		}
-		
-	
-		
-		function getNew() {
-			$.ajax({
-				url: '${APIurl}',
-				type: 'GET',
-				contentType: 'application/json',
-				data: JSON.stringify(data),
-				//dataType: 'json',
-				success: function (result) {
-					window.location.href = "${NewURL}?page="+data.page;
-					 var result = JSON.parse(data);
-					 for (var i in result){
-						 document.getElementById("checkBox_"+result.id).innerHTML = i.title;
-						 document.getElementById("title").innerHTML = i.title;
-						 document.getElementById("shortDescription").innerHTML = i.shortDescription;
-					 }
 				},
 				error: function (error) {
 					window.location.href = "${NewURL}?page=1&message=errorSystem";

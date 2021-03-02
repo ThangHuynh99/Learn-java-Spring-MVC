@@ -27,9 +27,6 @@ public class NewEntity extends BaseEntity {
 	@Column(name = "content", columnDefinition = "TEXT")
 	private String content;
 	
-	@Column(name = "price")
-	private Long price;
-	
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private CategoryEntity category;
@@ -73,13 +70,6 @@ public class NewEntity extends BaseEntity {
 	public void setContent(String content) {
 		this.content = content;
 	}
-
-	public Long getPrice() {
-		return price;
-	}
-
-	public void setPrice(Long price) {
-		this.price = price;
-	}
+	
 	
 }
