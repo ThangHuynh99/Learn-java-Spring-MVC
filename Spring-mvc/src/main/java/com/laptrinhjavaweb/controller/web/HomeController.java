@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+<<<<<<< HEAD
 import com.laptrinhjavaweb.service.ICategoryService;
 import com.laptrinhjavaweb.service.INewService;
 
@@ -24,6 +25,11 @@ public class HomeController {
 	@Autowired
 	private INewService iNewService;
 
+=======
+@Controller(value = "homeControllerOfWeb")
+public class HomeController {   
+	
+>>>>>>> parent of e959fc0... update home page
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public ModelAndView homePage() {
         ModelAndView mav = new ModelAndView("web/home");

@@ -10450,3 +10450,53 @@ java.lang.Exception: File not found: E:\SPRING COURSE\Spring MVC\Spring-mvc\targ
 
 !ENTRY org.eclipse.jdt.debug 2 0 2021-03-02 09:51:29.160
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jpt.jpa.core 4 0 2021-03-02 09:53:37.771
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildParameterTypes(ASTTools.java:189)
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildMethodSignature(ASTTools.java:179)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initializeMethods(SourceType.java:573)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initialize(SourceType.java:132)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.newInstance(SourceType.java:113)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.buildType(SourceType.java:400)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.syncTypes(SourceType.java:390)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.synchronizeWith(SourceType.java:151)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.syncPrimaryType(SourceTypeCompilationUnit.java:131)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.synchronizeWith(SourceTypeCompilationUnit.java:71)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceCompilationUnit.synchronizeWithJavaSource(SourceCompilationUnit.java:153)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaCompilationUnitDelta(AbstractJpaProject.java:1394)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1227)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDeltaChildren(AbstractJpaProject.java:1236)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaPackageFragmentDelta(AbstractJpaProject.java:1378)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1224)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDeltaChildren(AbstractJpaProject.java:1236)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaPackageFragmentRootDelta(AbstractJpaProject.java:1350)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1221)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDeltaChildren(AbstractJpaProject.java:1236)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaProjectDelta(AbstractJpaProject.java:1264)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1218)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDeltaChildren(AbstractJpaProject.java:1236)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaModelDelta(AbstractJpaProject.java:1258)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1215)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.javaElementChanged(AbstractJpaProject.java:1200)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaElementChanged_(InternalJpaProjectManager.java:897)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$JavaChangeEventHandlerCommand.execute(InternalJpaProjectManager.java:880)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-03-02 09:53:38.597
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-03-02 09:53:38.622
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-03-02 09:53:39.928
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-03-02 09:53:39.974
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-03-02 09:53:56.512
+!MESSAGE The workspace will exit with unsaved changes in this session.

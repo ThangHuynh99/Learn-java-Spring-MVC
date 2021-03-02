@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of e959fc0... update home page
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
 <fullyQualifiedTypeName name="org.springframework.data.domain.AuditorAware"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetailsService"/>
@@ -54,6 +57,7 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.hibernate.engine.spi.ExecutableList.Sorter"/>
@@ -66,6 +70,9 @@
 =======
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 >>>>>>> parent of e959fc0... update home page
+=======
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+>>>>>>> parent of e959fc0... update home page
 <fullyQualifiedTypeName name="com.laptrinhjavaweb.service.ICategoryService"/>
 <fullyQualifiedTypeName name="com.laptrinhjavaweb.dto.CategoryDTO"/>
 <fullyQualifiedTypeName name="com.laptrinhjavaweb.dto.NewDTO"/>
@@ -75,12 +82,16 @@
 <fullyQualifiedTypeName name="com.laptrinhjavaweb.service.impl.NewService"/>
 <fullyQualifiedTypeName name="com.laptrinhjavaweb.service.INewService"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="com.laptrinhjavaweb.dto.NewDTO"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
 <fullyQualifiedTypeName name="java.text.NumberFormat"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
+=======
+<fullyQualifiedTypeName name="com.laptrinhjavaweb.repository.CategoryRepository"/>
+>>>>>>> parent of e959fc0... update home page
 =======
 <fullyQualifiedTypeName name="com.laptrinhjavaweb.repository.CategoryRepository"/>
 >>>>>>> parent of e959fc0... update home page

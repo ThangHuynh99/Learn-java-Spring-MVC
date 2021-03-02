@@ -61,7 +61,12 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
+<<<<<<< HEAD
 						<a href="#"><img class="card-img-top" src='<c:url value="/images/lebron-18.jpg"></c:url>' alt=""></a>
+=======
+						<a href="#"><img class="card-img-top"
+							src="http://placehold.it/700x400" alt=""></a>
+>>>>>>> parent of e959fc0... update home page
 						<div class="card-body">
 							<h4 class="card-title">
 								<a href="#">Item One</a>
