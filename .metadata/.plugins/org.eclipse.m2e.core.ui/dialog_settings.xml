@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="E:\SPRING COURSE\Spring MVC\Spring-mvc\src\main\java\com\laptrinhjavaweb\api\admin\NewAPI.java"/>
+			<item value="E:\SPRING COURSE\Spring MVC\Spring-mvc"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
