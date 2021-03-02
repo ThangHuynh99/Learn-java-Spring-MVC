@@ -23,7 +23,7 @@ import com.laptrinhjavaweb.service.INewService;
 public class HomeController {   
 	@Autowired
 	private ICategoryService iCategoryService;
-	
+	//commit
 	@Autowired
 	private INewService iNewService;
 	

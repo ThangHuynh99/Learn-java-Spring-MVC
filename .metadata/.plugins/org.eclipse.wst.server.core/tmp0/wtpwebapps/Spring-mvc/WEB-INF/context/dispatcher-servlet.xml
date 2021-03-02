@@ -41,4 +41,5 @@
     </mvc:interceptors> -->
     
     <mvc:resources mapping="/template/**" location="/template/" />
+     <mvc:resources mapping="images/**" location="/images/" /> 
 </beans>
